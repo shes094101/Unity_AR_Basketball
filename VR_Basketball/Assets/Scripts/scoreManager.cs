@@ -21,7 +21,7 @@ public class scoreManager : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.tag == "ball") {
+        if (other.tag == "ball" && other.transform.position.y > 2.5f) {
             AddScore();
         }
         if (other.transform.root.name == "Player")
